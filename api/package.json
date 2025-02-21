@@ -11,5 +11,10 @@
   "description": "",
   "dependencies": {
     "fastify": "^5.2.1"
+  },
+  "devDependencies": {
+    "@types/node": "^22.13.4",
+    "tsx": "^4.19.3",
+    "typescript": "^5.7.3"
   }
 }
