@@ -18,10 +18,8 @@
     "zod": "^3.24.2"
   },
   "devDependencies": {
-    "@rocketseat/eslint-config": "^2.2.2",
+    "@biomejs/biome": "^1.9.4",
     "@types/node": "^22.13.4",
-    "eslint": "^8.57.1",
-    "eslint-plugin-simple-import-sort": "^12.1.1",
     "tsx": "^4.19.3",
     "typescript": "^5.7.3"
   }
