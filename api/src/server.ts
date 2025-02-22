@@ -9,6 +9,8 @@ import {
   ZodTypeProvider,
 } from 'fastify-type-provider-zod'
 
+import { subscribeToEventRoute } from './routes/subscribe-to-event-route'
+
 const app = fastify().withTypeProvider<ZodTypeProvider>()
 
 app.setSerializerCompiler(serializerCompiler)
@@ -32,6 +34,8 @@ app.register(fastifySwagger, {
 app.register(fastifySwaggerUi, {
   routePrefix: '/docs',
 })
+
+app.register(subscribeToEventRoute)
 
 app.listen({ port: 3333 }).then(() => {
   console.log('Server running... 🚀')
