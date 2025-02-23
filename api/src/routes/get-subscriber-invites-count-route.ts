@@ -1,6 +1,6 @@
 import type { FastifyPluginAsyncZod } from 'fastify-type-provider-zod'
 import z from 'zod'
-import { getSubscriberInviteCounts } from '../drizzle/functions/get-subscriber-invite-counts'
+import { getSubscriberInviteCount } from '../drizzle/functions/get-subscriber-invite-count'
 
 export const getSubscriberInviteCountRoute: FastifyPluginAsyncZod =
   async app => {
@@ -23,7 +23,7 @@ export const getSubscriberInviteCountRoute: FastifyPluginAsyncZod =
       async (request, reply) => {
         const { subscriberID } = request.params
 
-        const { count } = await getSubscriberInviteCounts({ subscriberID })
+        const { count } = await getSubscriberInviteCount({ subscriberID })
 
         return reply.status(200).send({
           count,

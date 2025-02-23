@@ -12,7 +12,7 @@ import {
 import { env } from './env'
 import { accessInviteLinkRoute } from './routes/access-invite-link-route'
 import { getSubscriberInviteClicksRoute } from './routes/get-subscriber-invite-clicks-route'
-import { getSubscriberInviteCountRoute } from './routes/get-subscriber-invites-counts-route'
+import { getSubscriberInviteCountRoute } from './routes/get-subscriber-invites-count-route'
 import { subscribeToEventRoute } from './routes/subscribe-to-event-route'
 
 const app = fastify().withTypeProvider<ZodTypeProvider>()
