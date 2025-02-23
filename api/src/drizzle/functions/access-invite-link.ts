@@ -1,6 +1,4 @@
 import { redis } from '../../redis/client'
-import { db } from '../client'
-import { subscriptions } from '../schema/subscriptions'
 
 interface accessInviteLinkParams {
   subscriberID: string
