@@ -1,8 +1,6 @@
 import type { FastifyPluginAsyncZod } from 'fastify-type-provider-zod'
 import z from 'zod'
-import { accessInviteLink } from '../drizzle/functions/access-invite-link'
 import { getSubscriberInviteClicks } from '../drizzle/functions/get-subscriber-invite-clicks'
-import { env } from '../env'
 
 export const getSubscriberInviteClicksRoute: FastifyPluginAsyncZod =
   async app => {
