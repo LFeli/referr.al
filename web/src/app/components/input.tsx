@@ -1,4 +1,3 @@
-
 interface InputRootProps extends React.ComponentProps<'div'> {
   error?: boolean
 }
