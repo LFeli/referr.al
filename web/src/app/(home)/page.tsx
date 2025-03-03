@@ -1,9 +1,11 @@
 import Image from 'next/image'
 
 import { ArrowRightIcon, RadioIcon, UserIcon } from 'lucide-react'
-import logo from '../assets/logo.svg'
-import { Button } from '../components/button'
-import { InputField, InputIcon, InputRoot } from '../components/input'
+
+import logo from '../../assets/logo.svg'
+import { Button } from '../../components/button'
+import { InputField, InputIcon, InputRoot } from '../../components/input'
+import { SubscriptionForm } from './components/subscription-form'
 
 export default function Home() {
   return (
@@ -42,34 +44,7 @@ export default function Home() {
         </section>
 
         <section className="bg-gray-700 border border-gray-600 rounded-2xl p-8 w-full md:max-w-[440px]">
-          <form className="space-y-6">
-            <h2 className="font-heading font-semibold text-gray-200 text-xl">
-              Inscrição
-            </h2>
-
-            <div className="space-y-3">
-              <InputRoot>
-                <InputIcon>
-                  <UserIcon />
-                </InputIcon>
-
-                <InputField type="text" placeholder="Nome completo" />
-              </InputRoot>
-
-              <InputRoot>
-                <InputIcon>
-                  <UserIcon />
-                </InputIcon>
-
-                <InputField type="text" placeholder="Nome completo" />
-              </InputRoot>
-            </div>
-
-            <Button type="submit">
-              Confirmar
-              <ArrowRightIcon />
-            </Button>
-          </form>
+          <SubscriptionForm />
         </section>
       </div>
     </div>
