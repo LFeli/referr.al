@@ -18,23 +18,23 @@ export type SubscribeToEvent201 = {
 /**
  * @nullable
  */
-export type GetInvitesSubscriberID302 = typeof GetInvitesSubscriberID302[keyof typeof GetInvitesSubscriberID302] | null;
+export type AccessInviteLink302 = typeof AccessInviteLink302[keyof typeof AccessInviteLink302] | null;
 
 
 // eslint-disable-next-line @typescript-eslint/no-redeclare
-export const GetInvitesSubscriberID302 = {
+export const AccessInviteLink302 = {
   null: 'null',
 } as const;
 
-export type GetSubscribersSubscriberIDRankingClicks200 = {
+export type GetSubscriberInviteClicks200 = {
   count: number;
 };
 
-export type GetSubscribersSubscriberIDRankingCount200 = {
+export type GetSubscriberInviteCount200 = {
   count: number;
 };
 
-export type GetSubscribersSubscriberIDRankingPosition200 = {
+export type GetSubscriberRankingPosition200 = {
   /** @nullable */
   position: number | null;
 };
@@ -83,7 +83,7 @@ export const subscribeToEvent = async (subscribeToEventBody: SubscribeToEventBod
 /**
  * @summary Access invite link and redirect user
  */
-export const getGetInvitesSubscriberIDUrl = (subscriberID: string,) => {
+export const getAccessInviteLinkUrl = (subscriberID: string,) => {
 
 
   
@@ -91,9 +91,9 @@ export const getGetInvitesSubscriberIDUrl = (subscriberID: string,) => {
   return `http://localhost:3333/invites/${subscriberID}`
 }
 
-export const getInvitesSubscriberID = async (subscriberID: string, options?: RequestInit): Promise<unknown> => {
+export const accessInviteLink = async (subscriberID: string, options?: RequestInit): Promise<unknown> => {
   
-  const res = await fetch(getGetInvitesSubscriberIDUrl(subscriberID),
+  const res = await fetch(getAccessInviteLinkUrl(subscriberID),
   {      
     ...options,
     method: 'GET'
@@ -113,7 +113,7 @@ export const getInvitesSubscriberID = async (subscriberID: string, options?: Req
 /**
  * @summary Get subscribers invite click count
  */
-export const getGetSubscribersSubscriberIDRankingClicksUrl = (subscriberID: string,) => {
+export const getGetSubscriberInviteClicksUrl = (subscriberID: string,) => {
 
 
   
@@ -121,9 +121,9 @@ export const getGetSubscribersSubscriberIDRankingClicksUrl = (subscriberID: stri
   return `http://localhost:3333/subscribers/${subscriberID}/ranking/clicks`
 }
 
-export const getSubscribersSubscriberIDRankingClicks = async (subscriberID: string, options?: RequestInit): Promise<GetSubscribersSubscriberIDRankingClicks200> => {
+export const getSubscriberInviteClicks = async (subscriberID: string, options?: RequestInit): Promise<GetSubscriberInviteClicks200> => {
   
-  const res = await fetch(getGetSubscribersSubscriberIDRankingClicksUrl(subscriberID),
+  const res = await fetch(getGetSubscriberInviteClicksUrl(subscriberID),
   {      
     ...options,
     method: 'GET'
@@ -133,7 +133,7 @@ export const getSubscribersSubscriberIDRankingClicks = async (subscriberID: stri
 )
 
   const body = [204, 205, 304].includes(res.status) ? null : await res.text()
-  const data: GetSubscribersSubscriberIDRankingClicks200 = body ? JSON.parse(body) : {}
+  const data: GetSubscriberInviteClicks200 = body ? JSON.parse(body) : {}
 
   return data
 }
@@ -143,7 +143,7 @@ export const getSubscribersSubscriberIDRankingClicks = async (subscriberID: stri
 /**
  * @summary Get subscribers invite count
  */
-export const getGetSubscribersSubscriberIDRankingCountUrl = (subscriberID: string,) => {
+export const getGetSubscriberInviteCountUrl = (subscriberID: string,) => {
 
 
   
@@ -151,9 +151,9 @@ export const getGetSubscribersSubscriberIDRankingCountUrl = (subscriberID: strin
   return `http://localhost:3333/subscribers/${subscriberID}/ranking/count`
 }
 
-export const getSubscribersSubscriberIDRankingCount = async (subscriberID: string, options?: RequestInit): Promise<GetSubscribersSubscriberIDRankingCount200> => {
+export const getSubscriberInviteCount = async (subscriberID: string, options?: RequestInit): Promise<GetSubscriberInviteCount200> => {
   
-  const res = await fetch(getGetSubscribersSubscriberIDRankingCountUrl(subscriberID),
+  const res = await fetch(getGetSubscriberInviteCountUrl(subscriberID),
   {      
     ...options,
     method: 'GET'
@@ -163,7 +163,7 @@ export const getSubscribersSubscriberIDRankingCount = async (subscriberID: strin
 )
 
   const body = [204, 205, 304].includes(res.status) ? null : await res.text()
-  const data: GetSubscribersSubscriberIDRankingCount200 = body ? JSON.parse(body) : {}
+  const data: GetSubscriberInviteCount200 = body ? JSON.parse(body) : {}
 
   return data
 }
@@ -173,7 +173,7 @@ export const getSubscribersSubscriberIDRankingCount = async (subscriberID: strin
 /**
  * @summary Get subscribers ranking position
  */
-export const getGetSubscribersSubscriberIDRankingPositionUrl = (subscriberID: string,) => {
+export const getGetSubscriberRankingPositionUrl = (subscriberID: string,) => {
 
 
   
@@ -181,9 +181,9 @@ export const getGetSubscribersSubscriberIDRankingPositionUrl = (subscriberID: st
   return `http://localhost:3333/subscribers/${subscriberID}/ranking/position`
 }
 
-export const getSubscribersSubscriberIDRankingPosition = async (subscriberID: string, options?: RequestInit): Promise<GetSubscribersSubscriberIDRankingPosition200> => {
+export const getSubscriberRankingPosition = async (subscriberID: string, options?: RequestInit): Promise<GetSubscriberRankingPosition200> => {
   
-  const res = await fetch(getGetSubscribersSubscriberIDRankingPositionUrl(subscriberID),
+  const res = await fetch(getGetSubscriberRankingPositionUrl(subscriberID),
   {      
     ...options,
     method: 'GET'
@@ -193,7 +193,7 @@ export const getSubscribersSubscriberIDRankingPosition = async (subscriberID: st
 )
 
   const body = [204, 205, 304].includes(res.status) ? null : await res.text()
-  const data: GetSubscribersSubscriberIDRankingPosition200 = body ? JSON.parse(body) : {}
+  const data: GetSubscriberRankingPosition200 = body ? JSON.parse(body) : {}
 
   return data
 }
