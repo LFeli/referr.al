@@ -1,7 +1,6 @@
 import type { FastifyPluginAsyncZod } from 'fastify-type-provider-zod'
 import z from 'zod'
 import { getRanking } from '../drizzle/functions/get-ranking'
-import { getSubscriberInviteCount } from '../drizzle/functions/get-subscriber-invite-count'
 
 export const getRankingRoute: FastifyPluginAsyncZod = async app => {
   app.get(
@@ -11,9 +10,6 @@ export const getRankingRoute: FastifyPluginAsyncZod = async app => {
         tags: ['referral'],
         summary: 'Get ranking',
         operationId: 'getRanking',
-        params: z.object({
-          subscriberID: z.string(),
-        }),
         response: {
           200: z.object({
             ranking: z.array(
