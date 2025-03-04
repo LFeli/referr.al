@@ -3,9 +3,10 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "start": "node --env-file .env dist/server.mjs",
+    "db:init": "npx drizzle-kit generate && npx drizzle-kit migrate",
+    "dev": "tsx watch --env-file=.env src/server.ts",
     "build": "tsup-node",
-    "dev": "tsx watch --env-file=.env src/server.ts"
+    "start": "node --env-file .env dist/server.mjs"
   },
   "keywords": [],
   "author": "",
