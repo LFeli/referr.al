@@ -5,37 +5,37 @@ reffer.al is an application designed for online events, allowing participants to
 ## Tech's and Tool's 🔧
 
 ### Back-end
-- **Node.js** - JavaScript runtime environment on the server-side
-- **TypeScript** - Static typing for more robust and maintainable code
-- **Fastify** - High-performance and lightweight web framework
-- **Drizzle ORM** - TypeScript-first ORM for SQL databases
-- **Zod** - Type-safe schema validation
-- **Tsup** - Fast bundler for TypeScript projects
-- **Swagger** - API documentation using Fastify plugin for create and UI  
-- **Biome** - Code formatter and linter for TypeScript and JavaScript
+- `Node.js` - JavaScript runtime environment on the server-side
+- `TypeScript` - Static typing for more robust and maintainable code
+- `Fastify` - High-performance and lightweight web framework
+- `Drizzle ORM` - TypeScript-first ORM for SQL databases
+- `Zod` - Type-safe schema validation
+- `Tsup` - Fast bundler for TypeScript projects
+- `Swagger` - API documentation using Fastify plugin for create and UI  
+- `Biome` - Code formatter and linter for TypeScript and JavaScript
 
 ### Front-end
-- **React** - A JavaScript library for building user interfaces
-- **Next.js** - A React framework with server-side rendering and static site generation
-- **TypeScript** - Static typing for a more robust and maintainable codebase
-- **TailwindCSS** - Utility-first CSS framework for styling
-- **Orval** - API client code generation from OpenAPI specifications
-- **Zod** - Type-safe schema validation
-- **Biome** - Code formatter and linter
-- **Lucide Icons** - Open-source icons for React applications
-- **React Hook Form** - Performant and flexible form management
-- **Tailwind Merge** - Utility for merging Tailwind CSS classes efficiently
+- `React` - A JavaScript library for building user interfaces
+- `Next.js` - A React framework with server-side rendering and static site generation
+- `TypeScript` - Static typing for a more robust and maintainable codebase
+- `TailwindCSS` - Utility-first CSS framework for styling
+- `Orval` - API client code generation from OpenAPI specifications
+- `Zod` - Type-safe schema validation
+- `Biome` - Code formatter and linter
+- `Lucide Icons` - Open-source icons for React applications
+- `React Hook Form` - Performant and flexible form management
+- `Tailwind Merge` - Utility for merging Tailwind CSS classes efficiently
 
 ### Database
-- **PostgreSQL** - High-performance, open-source relational database
-- **Redis** - In-memory key-value store for caching and real-time messaging
+- `PostgreSQL` - High-performance, open-source relational database
+- `Redis` - In-memory key-value store for caching and real-time messaging
 
 ### Tool's
-- **Docker** - Containerization for development and deployment
-- **VS Code** - Popular code editor with extensive extensions and integrations
-- **Insomnia** - API testing and debugging tool
-- **DBeaver** - Database management tool for SQL and NoSQL databases
-- **Warp Terminal** - Modern terminal with GPU acceleration and team collaboration features
+- `Docker` - Containerization for development and deployment
+- `VS Code` - Popular code editor with extensive extensions and integrations
+- `Insomnia` - API testing and debugging tool
+- `DBeaver` - Database management tool for SQL and NoSQL databases
+- `Warp Terminal` - Modern terminal with GPU acceleration and team collaboration features
 
 ## Available scripts ⌨️
 
